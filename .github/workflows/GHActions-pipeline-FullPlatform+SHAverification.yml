@@ -43,8 +43,6 @@ steps:
         echo "sha is not good :("
       fi
 
-      npm install snyk -g
-      npm install snyk-to-html -g
       snyk auth ${{secrets.SNYK_AUTH}}
 
   - name: Snyk Open Source # For testing and failing please add snyk test or snyk test --all-projects before snyk monitor
